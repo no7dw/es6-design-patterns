@@ -10,11 +10,11 @@ class Singleton {
         }
         else
             return _singleton
-        facade.log("Singleton class created")
+        console.log("Singleton class created")
     }
 
     SingletonOperation () {
-        facade.log('SingletonOperation')
+        console.log('SingletonOperation')
     }
 
     GetSingletonData () {
@@ -25,9 +25,9 @@ class Singleton {
 function init_Singleton() {
     var singleton1 = new Singleton("data1")
     var singleton2 = new Singleton("data2")
-    facade.log(singleton1.GetSingletonData())
-    facade.log(singleton2.GetSingletonData())
-    facade.log(singleton1 instanceof Singleton)
-    facade.log(singleton2 instanceof Singleton)
-    facade.log(singleton1 === singleton2)
+    console.log(singleton1.GetSingletonData())
+    console.log(singleton2.GetSingletonData())
+    console.log(singleton1 instanceof Singleton)
+    console.log(singleton2 instanceof Singleton)
+    console.log(singleton1 === singleton2)
 }

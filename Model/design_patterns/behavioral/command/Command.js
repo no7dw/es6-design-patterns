@@ -2,7 +2,7 @@
 
 class Invoker {
     constructor() {
-        facade.log('Invoker created')
+        console.log('Invoker created')
     }
 
     StoreCommand(command) {
@@ -22,22 +22,22 @@ class ConcreteCommand extends Command {
     constructor(receiver, state) {
         super()
         this.receiver = receiver
-        facade.log('ConcreteCommand created')
+        console.log('ConcreteCommand created')
     }
     
     Execute() {
-        facade.log('ConcreteCommand Execute')
+        console.log('ConcreteCommand Execute')
         this.receiver.Action();
     }
 }
 
 class Receiver {
     constructor() {
-        facade.log('Receiver created')
+        console.log('Receiver created')
     }
 
     Action() {
-        facade.log('Receiver Action')
+        console.log('Receiver Action')
     }
 }
 

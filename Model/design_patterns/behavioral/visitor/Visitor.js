@@ -14,36 +14,36 @@ class Visitor {
 class ConcreteVisitor1 extends Visitor {
     constructor() {
         super()
-        facade.log("ConcreteVisitor1 created");
+        console.log("ConcreteVisitor1 created");
     }
 
     VisitConcreteElementA (ConcreteElementA){
-        facade.log("ConcreteVisitor1 visited ConcreteElementA");
+        console.log("ConcreteVisitor1 visited ConcreteElementA");
     }
 
     VisitConcreteElementB (ConcreteElementB){
-        facade.log("ConcreteVisitor1 visited ConcreteElementB");
+        console.log("ConcreteVisitor1 visited ConcreteElementB");
     }  
 }
 
 class ConcreteVisitor2 extends Visitor {
     constructor() {
         super()
-        facade.log("ConcreteVisitor2 created");
+        console.log("ConcreteVisitor2 created");
     }
 
     VisitConcreteElementA (ConcreteElementA){
-        facade.log("ConcreteVisitor2 visited ConcreteElementA");
+        console.log("ConcreteVisitor2 visited ConcreteElementA");
     }
 
     VisitConcreteElementB (ConcreteElementB){
-        facade.log("ConcreteVisitor2 visited ConcreteElementB");
+        console.log("ConcreteVisitor2 visited ConcreteElementB");
     }  
 }
 
 class ObjectStructure {
     constructor() {
-        facade.log("ObjectStructure created");
+        console.log("ObjectStructure created");
     }
 }
 
@@ -58,7 +58,7 @@ class Element {
 class ConcreteElementA extends Element {
     constructor() {
         super()
-        facade.log("ConcreteElementA created");
+        console.log("ConcreteElementA created");
     }
 
     Accept (visitor){
@@ -66,14 +66,14 @@ class ConcreteElementA extends Element {
     }
 
     OperationA (){
-        facade.log("ConcreteElementA OperationA");  
+        console.log("ConcreteElementA OperationA");  
     }
 }
 
 class ConcreteElementB extends Element {
     constructor() {
         super()
-        facade.log("ConcreteElementB created");
+        console.log("ConcreteElementB created");
     }
 
     Accept (visitor){
@@ -81,7 +81,7 @@ class ConcreteElementB extends Element {
     }
 
     OperationB (){
-        facade.log("ConcreteElementB OperationB");  
+        console.log("ConcreteElementB OperationB");  
     }
 }
 

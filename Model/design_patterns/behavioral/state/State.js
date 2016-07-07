@@ -30,22 +30,22 @@ class State {
 class ConcreteStateA extends State {
     constructor() {
         super()
-        facade.log('ConcreteStateA created')
+        console.log('ConcreteStateA created')
     }
 
     Handle (context){
-        facade.log('ConcreteStateA handle')
+        console.log('ConcreteStateA handle')
     }
 }
 
 class ConcreteStateB extends State {
     constructor() {
         super()
-        facade.log('ConcreteStateB created')
+        console.log('ConcreteStateB created')
     }
 
     Handle (context){
-        facade.log('ConcreteStateB handle')
+        console.log('ConcreteStateB handle')
     }
 }
 

@@ -14,16 +14,16 @@ class AbstractFactory {
 class ConcreteFactory1 extends AbstractFactory {
     constructor() {
         super()
-        facade.log("ConcreteFactory1 class created");
+        console.log("ConcreteFactory1 class created");
     }
 
     createProductA (product) {
-        facade.log('ConcreteFactory1 createProductA')
+        console.log('ConcreteFactory1 createProductA')
         return new ProductA1()
     }
 
     createProductB (product) {
-        facade.log('ConcreteFactory1 createProductB')
+        console.log('ConcreteFactory1 createProductB')
         return new ProductB1()
     }
 }
@@ -31,16 +31,16 @@ class ConcreteFactory1 extends AbstractFactory {
 class ConcreteFactory2 extends AbstractFactory {
     constructor() {
         super()
-        facade.log("ConcreteFactory2 class created");
+        console.log("ConcreteFactory2 class created");
     }
 
     createProductA (product) {
-        facade.log('ConcreteFactory2 createProductA')
+        console.log('ConcreteFactory2 createProductA')
         return new ProductA2()
     }
 
     createProductB (product) {
-        facade.log('ConcreteFactory2 createProductB')
+        console.log('ConcreteFactory2 createProductB')
         return new ProductB2()
     }
 }
@@ -59,28 +59,28 @@ class AbstractProductB {
 class ProductA1 extends AbstractProductA {
     constructor() {
         super()
-        facade.log('ProductA1 created')
+        console.log('ProductA1 created')
     }
 }
 
 class ProductA2 extends AbstractProductA {
     constructor() {
         super()
-        facade.log('ProductA2 created')
+        console.log('ProductA2 created')
     }
 }
 
 class ProductB1 extends AbstractProductB {
     constructor() {
         super()
-        facade.log('ProductB1 created')
+        console.log('ProductB1 created')
     }
 }
 
 class ProductB2 extends AbstractProductB {
     constructor() {
         super()
-        facade.log('ProductB2 created')
+        console.log('ProductB2 created')
     }
 }
 
@@ -91,3 +91,5 @@ function init_AbstractFactory() {
     var factory2 = new ConcreteFactory2()
     var productA2 = factory2.createProductA()
 }
+
+init_AbstractFactory()

@@ -30,22 +30,22 @@ class Strategy {
 class ConcreteStrategyA extends Strategy{
     constructor() {
         super()
-        facade.log('ConcreteStrategyA created')
+        console.log('ConcreteStrategyA created')
     }
 
     AlgorithmInterface (){
-        facade.log('ConcreteStrategyA algorithm')
+        console.log('ConcreteStrategyA algorithm')
     }
 }
 
 class ConcreteStrategyB extends Strategy{
     constructor() {
         super()
-        facade.log('ConcreteStrategyB created')
+        console.log('ConcreteStrategyB created')
     }
 
     AlgorithmInterface (){
-        facade.log('ConcreteStrategyB algorithm')
+        console.log('ConcreteStrategyB algorithm')
     }
 }
 

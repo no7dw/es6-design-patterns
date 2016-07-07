@@ -19,15 +19,15 @@ class AbstractClass {
 class ConcreteClass extends AbstractClass {
     constructor() {
         super()
-        facade.log("ConcreteClass created")
+        console.log("ConcreteClass created")
     }
 
     PrimitiveOperation1 (){
-        facade.log('ConcreteClass PrimitiveOperation1')
+        console.log('ConcreteClass PrimitiveOperation1')
     }
 
     PrimitiveOperation2 (){
-        facade.log('ConcreteClass PrimitiveOperation2')
+        console.log('ConcreteClass PrimitiveOperation2')
     }  
 }
 

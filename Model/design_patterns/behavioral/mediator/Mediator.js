@@ -12,7 +12,7 @@ class Mediator {
 class ConcreteMediator extends Mediator {
     constructor() {
         super()
-        facade.log('ConcreteMediator created')
+        console.log('ConcreteMediator created')
         this.colleague1 = new ConcreteColleague1(this)
         this.colleague2 = new ConcreteColleague2(this)
     }
@@ -20,14 +20,14 @@ class ConcreteMediator extends Mediator {
     ColleagueChanged(colleague) {
         switch(colleague) {
             case this.colleague1:
-                facade.log('ConcreteColleague1 has Changed -> change ConcreteColleague2.feature: ')
+                console.log('ConcreteColleague1 has Changed -> change ConcreteColleague2.feature: ')
                 this.colleague2.setFeature('new feature 2')
                 break
             case this.colleague2:
-                facade.log('ConcreteColleague2 has Changed, but do nothing')
+                console.log('ConcreteColleague2 has Changed, but do nothing')
                 break
             default:
-                facade.log('Do nothing')
+                console.log('Do nothing')
         }
     }
 }
@@ -44,13 +44,13 @@ class Colleague {
 class ConcreteColleague1 extends Colleague {
     constructor(mediator) {
         super()
-        facade.log('ConcreteColleague1 created')
+        console.log('ConcreteColleague1 created')
         this.mediator = mediator
         this.feature = "feature 1"
     }
 
     setFeature(feature) {
-        facade.log('ConcreteColleague1 Feature has changed from ' + this.feature + ' to ' + feature)
+        console.log('ConcreteColleague1 Feature has changed from ' + this.feature + ' to ' + feature)
         this.feature = feature
         this.Changed()
     }
@@ -58,13 +58,13 @@ class ConcreteColleague1 extends Colleague {
 class ConcreteColleague2 extends Colleague {
     constructor(mediator) {
         super()
-        facade.log('ConcreteColleague2 created')
+        console.log('ConcreteColleague2 created')
         this.mediator = mediator
         this.feature = "feature 2"
     }
 
     setFeature(feature) {
-        facade.log('ConcreteColleague2 Feature has changed from ' + this.feature + ' to ' + feature)
+        console.log('ConcreteColleague2 Feature has changed from ' + this.feature + ' to ' + feature)
         this.feature = feature
         this.Changed()
     }

@@ -1,8 +1,8 @@
 'use strict';
 
-class Facade {
+class console {
     constructor () {
-        this.log("Facade class created");
+        this.log("console class created");
         this.htmlid = null;
     }
 
@@ -21,10 +21,10 @@ class Facade {
 
     test_dp (dp) {
         switch(dp){
-            case "Facade":
-                this.htmlid = "test_Facade"
+            case "console":
+                this.htmlid = "test_console"
                 this.erase()
-                this.log("This is the Facade")
+                this.log("This is the console")
                 break
             case "AbstractFactory": 
                 this.htmlid = "test_AbstractFactory"

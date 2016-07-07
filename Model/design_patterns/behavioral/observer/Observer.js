@@ -6,7 +6,7 @@ class Subjectt {
 
     Attach (Observer){
         this.observers.push(Observer);
-        facade.log('Observer attached')
+        console.log('Observer attached')
     }
 
     Dettach (Observer){
@@ -16,7 +16,7 @@ class Subjectt {
     }
 
     Notify (){
-        facade.log('Subject Notify')
+        console.log('Subject Notify')
         for(var i in this.observers){
             this.observers[i].Update(this);
         }
@@ -28,7 +28,7 @@ class ConcreteSubject extends Subjectt {
         super()
         this.subjectState = null
         this.observers = []
-        facade.log('ConcreteSubject created')
+        console.log('ConcreteSubject created')
     }
 
     GetState() {
@@ -53,12 +53,12 @@ class ConcreteObserver extends Observer {
     constructor() {
         super()
         this.observerState = '';
-        facade.log('ConcreteObserver created')
+        console.log('ConcreteObserver created')
     }
 
     Update (Subject){
         this.observerState = Subject.GetState();
-        facade.log('Observer new state: ' + this.observerState)
+        console.log('Observer new state: ' + this.observerState)
     }
 }
 

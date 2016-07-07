@@ -1,6 +1,6 @@
 var get_source = function(main_dir, dir, file){
         var disclaimer = "//Project done by http://www.kuip.co.uk/\n//License: Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/)\n";
-        if(file != "Facade")
+        if(file != "console")
             var url = "Model/design_patterns/" + main_dir + "/" + dir + "/" + file + ".js";
         else var url = "Model/design_patterns/"+file + ".js";
         $.ajax({

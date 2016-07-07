@@ -13,7 +13,7 @@ class Abstraction {
 class RefinedAbstraction extends Abstraction {
     constructor() {
         super()
-        facade.log('RefinedAbstraction created')
+        console.log('RefinedAbstraction created')
     }
 
     setImp (imp) {
@@ -35,22 +35,22 @@ class Implementor {
 class ConcreteImplementorA extends Implementor {
     constructor() {
         super()
-        facade.log('ConcreteImplementorA created')
+        console.log('ConcreteImplementorA created')
     }
 
     OperationImp (){
-        facade.log('ConcreteImplementorA OperationImp')
+        console.log('ConcreteImplementorA OperationImp')
     }
 }
 
 class ConcreteImplementorB extends Implementor {
     constructor() {
         super()
-        facade.log('ConcreteImplementorB created')
+        console.log('ConcreteImplementorB created')
     }
 
     OperationImp (){
-        facade.log('ConcreteImplementorB OperationImp')
+        console.log('ConcreteImplementorB OperationImp')
     }
 }
 

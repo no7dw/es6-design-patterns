@@ -1,14 +1,14 @@
 'use strict';
 
-class Productt {
+class Product {
     constructor() {
     }
 }
 
-class ConcreteProduct extends Productt {
+class ConcreteProduct extends Product {
     constructor() {
         super()
-        facade.log('ConcreteProduct created')
+        console.log('ConcreteProduct created')
     }
 }
 
@@ -21,9 +21,9 @@ class Creator {
     }
 
     AnOperation (){
-        facade.log("AnOperation()")
+        console.log("AnOperation()")
         this.product = this.FactoryMethod()
-        facade.log(this.product instanceof ConcreteProduct)
+        console.log(this.product instanceof ConcreteProduct)
     }
 }
 
@@ -31,7 +31,7 @@ class ConcreteCreator extends Creator {
 
     constructor() {
         super()
-        facade.log('ConcreteCreator created')
+        console.log('ConcreteCreator created')
     }
 
     FactoryMethod (){

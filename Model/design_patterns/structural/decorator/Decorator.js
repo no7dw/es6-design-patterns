@@ -11,11 +11,11 @@ class Componentt {
 class ConcreteComponent extends Componentt {
     constructor() {
         super()
-        facade.log('ConcreteComponent created')
+        console.log('ConcreteComponent created')
     }
 
     Operation (){
-        facade.log('o o')
+        console.log('o o')
     }
 }
 
@@ -23,7 +23,7 @@ class Decorator extends Componentt {
     constructor(component) {
         super()
         this.component = component
-        facade.log('Decorator created')
+        console.log('Decorator created')
     }
 
     Operation (){
@@ -35,12 +35,12 @@ class ConcreteDecoratorA extends Decorator {
     constructor(component, sign) {
         super(component)
         this.addedState = sign
-        facade.log('ConcreteDecoratorA created')
+        console.log('ConcreteDecoratorA created')
     }
 
     Operation (){
         super.Operation()
-        facade.log(this.addedState)
+        console.log(this.addedState)
     }
 }
 
@@ -48,17 +48,17 @@ class ConcreteDecoratorB extends Decorator {
     constructor(component, sign) {
         super(component)
         this.addedState = sign
-        facade.log('ConcreteDecoratorA created')
+        console.log('ConcreteDecoratorA created')
     }
 
     Operation (){
         super.Operation()
-        facade.log(this.addedState + this.addedState + this.addedState + this.addedState + this.addedState)
+        console.log(this.addedState + this.addedState + this.addedState + this.addedState + this.addedState)
     }
 
     AddedBehavior  (){
         this.Operation()
-        facade.log('|........|')
+        console.log('|........|')
     }
 }
 
@@ -66,10 +66,10 @@ function init_Decorator() {
     var component = new ConcreteComponent()
     var decoratorA = new ConcreteDecoratorA(component, '!!!')
     var decoratorB = new ConcreteDecoratorB(component, '.')
-    facade.log('component: ')
+    console.log('component: ')
     component.Operation()
-    facade.log('decoratorA: ')
+    console.log('decoratorA: ')
     decoratorA.Operation()
-    facade.log('decoratorB: ')
+    console.log('decoratorB: ')
     decoratorB.AddedBehavior()
 }

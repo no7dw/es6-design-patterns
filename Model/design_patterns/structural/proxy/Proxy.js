@@ -11,18 +11,18 @@ class Subject {
 class RealSubject extends Subject {
     constructor() {
         super()
-        facade.log('RealSubject created')
+        console.log('RealSubject created')
     }
 
     Request (){
-        facade.log('RealSubject handles request')
+        console.log('RealSubject handles request')
     }
 }
 
 class Proxy extends Subject {
     constructor() {
         super()
-        facade.log('Proxy created')
+        console.log('Proxy created')
     }
 
     Request (){

@@ -20,7 +20,7 @@ class Iterator {
 class ConcreteIterator extends Iterator {
     constructor(aggregate) {
         super()
-        facade.log('ConcreteIterator created')
+        console.log('ConcreteIterator created')
         this.index = 0
         this.aggregate = aggregate
     }
@@ -51,7 +51,7 @@ class ConcreteAggregate extends Aggregate {
     constructor(list) {
         super()
         this.list = list
-        facade.log('ConcreteAggregate created')
+        console.log('ConcreteAggregate created')
     }
 
 	CreateIterator (){
@@ -62,7 +62,7 @@ class ConcreteAggregate extends Aggregate {
 function init_Iterator() {
     var aggregate = new ConcreteAggregate([0,1,2,3,4,5,6,7])
     aggregate.CreateIterator()
-    facade.log(aggregate.iterator.First())
-    facade.log(aggregate.iterator.Next())
-    facade.log(aggregate.iterator.CurrentItem())
+    console.log(aggregate.iterator.First())
+    console.log(aggregate.iterator.Next())
+    console.log(aggregate.iterator.CurrentItem())
 }

@@ -21,11 +21,11 @@ class Leaf extends Component {
     constructor(name) {
         super()
         this.name = name
-        facade.log('Leaf created')
+        console.log('Leaf created')
     }
 
     Operation (){
-        facade.log(this.name)
+        console.log(this.name)
     }
 }
 
@@ -34,11 +34,11 @@ class Composite extends Component {
         super()
         this.name = name
         this.children = []
-        facade.log('Composite created')
+        console.log('Composite created')
     }
 
     Operation (){
-        facade.log('Composite Operation for: ' + this.name)
+        console.log('Composite Operation for: ' + this.name)
         for(var i in this.children)
             this.children[i].Operation()
     }

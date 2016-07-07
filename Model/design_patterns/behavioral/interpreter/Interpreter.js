@@ -24,7 +24,7 @@ class TerminalExpression extends AbstractExpression {
     constructor(name) {
         super()
         this.name = name
-        facade.log('TerminalExpression created')
+        console.log('TerminalExpression created')
     }
 
 	Interpret (context){
@@ -35,7 +35,7 @@ class NonterminalExpression extends AbstractExpression {
     constructor() {
         super()
         this.name = '+'
-        facade.log('NonterminalExpression created')
+        console.log('NonterminalExpression created')
     }
 
 	Interpret (context){
@@ -46,5 +46,5 @@ class NonterminalExpression extends AbstractExpression {
 
 function init_Interpreter() {
     //var context = new Context('A+B+A')
-    facade.log('Not implemented')
+    console.log('Not implemented')
 }

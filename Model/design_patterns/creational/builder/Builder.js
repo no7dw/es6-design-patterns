@@ -3,7 +3,7 @@
 class Director {
     constructor() {
         this.structure = ['Maze','Wall','Door'];
-        facade.log("Director class created");
+        console.log("Director class created");
     }
 
     Construct (){
@@ -26,24 +26,24 @@ class Builder {
 class ConcreteBuilder extends Builder {
     constructor() {
         super()
-        facade.log("ConcreteBuilder class created");
+        console.log("ConcreteBuilder class created");
     }
 
     BuildPart (rawmaterial){
-        facade.log("ConcreteBuilder BuildPart()");
+        console.log("ConcreteBuilder BuildPart()");
         var material = rawmaterial
         this.product = new Product(material)
     }
 
     GetResult (){
-        facade.log(JSON.stringify(this.product))
+        console.log(JSON.stringify(this.product))
         return this.product
     }
 }
 
 class Product {
     constructor(material) {
-        facade.log("Product class created");
+        console.log("Product class created");
         this.data = material
     }
 }

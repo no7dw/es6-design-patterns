@@ -3,7 +3,7 @@
 class FlyweightFactory {
     constructor() {
         this.flyweights = {};
-        facade.log('FlyweightFactory created')
+        console.log('FlyweightFactory created')
     }
 
     GetFlyweight (key){
@@ -34,7 +34,7 @@ class ConcreteFlyweight extends Flyweight {
    constructor(key) {
         super()
         this.intrinsicState = key
-        facade.log('ConcreteFlyweight created')
+        console.log('ConcreteFlyweight created')
     }
 
     Operation (extrinsicState){
@@ -47,7 +47,7 @@ class UnsharedConcreteFlyweight extends Flyweight {
         super()
         this.flyweights = flyweights
         this.keys = keys
-        facade.log('UnsharedConcreteFlyweight created')
+        console.log('UnsharedConcreteFlyweight created')
     }
 
     Operation (extrinsicState){
@@ -58,8 +58,8 @@ class UnsharedConcreteFlyweight extends Flyweight {
             key = this.keys[Math.floor(Math.random() * (this.keys.length))]
             word = this.flyweights.GetFlyweight(key).Operation(word)
         }
-        facade.log('UnsharedConcreteFlyweight Operation: ')
-        facade.log(word)
+        console.log('UnsharedConcreteFlyweight Operation: ')
+        console.log(word)
     }
 }
 

@@ -21,11 +21,11 @@ class Target {
 
 class Adaptee {
     constructor() {
-        facade.log('Adaptee created')
+        console.log('Adaptee created')
     }
 
     SpecificRequest () {
-        facade.log('Adaptee request')
+        console.log('Adaptee request')
     }
 }
 
@@ -34,7 +34,7 @@ class Adapter extends Adaptee {
 
     constructor() {
         super()
-        facade.log('Adapter created')
+        console.log('Adapter created')
     }
 
     Request (){
