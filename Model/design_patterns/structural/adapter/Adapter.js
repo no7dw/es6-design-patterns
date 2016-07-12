@@ -47,3 +47,5 @@ function init_Adapter() {
     var f = new Target("adapter")
     f.Request()
 }
+
+init_Adapter()

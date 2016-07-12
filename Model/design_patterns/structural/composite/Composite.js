@@ -25,7 +25,7 @@ class Leaf extends Component {
     }
 
     Operation (){
-        console.log(this.name)
+        console.log(this.name + " do an Operation")
     }
 }
 
@@ -67,3 +67,5 @@ function init_Composite() {
     composite1.GetChild(1).Operation()
     composite2.Operation()
 }
+
+init_Composite()

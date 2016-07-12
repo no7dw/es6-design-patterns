@@ -1,6 +1,6 @@
 'use strict';
 
-class Contexttt {
+class Context {
     constructor(type){
         switch(type) {
             case "A":
@@ -50,8 +50,10 @@ class ConcreteStrategyB extends Strategy{
 }
 
 function init_Strategy() {
-    let contextA = new Contexttt("A")
+    let contextA = new Context("A")
     contextA.ContextInterface()
-    let contextB = new Contexttt("B")
+    let contextB = new Context("B")
     contextB.ContextInterface()
 }
+
+init_Strategy()

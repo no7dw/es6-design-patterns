@@ -35,3 +35,5 @@ function init_TemplateMethod() {
     let class1 = new ConcreteClass()
     class1.TemplateMethod()
 }  
+
+init_TemplateMethod()
